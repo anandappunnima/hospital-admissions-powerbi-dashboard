@@ -15,11 +15,19 @@ An interactive Power BI dashboard that analyzes hospital admission and patient d
 - **Power BI** (data modeling, DAX, visualization)
 
 ## Steps
-1. **Data loading:**     imported the CSV dataset into Power BI.
-2. **Data cleaning:**    removed duplicates, handled missing values, fixed date formats.
-3. **Data modeling:**    created relationships between tables, added a date table.
-4. **DAX measures:**     total admissions, average length of stay, admissions by department.
-5. **Dashboard design:** built visuals with slicers and filters for interactive exploration.
+1.	Data loading: imported the Excel workbook (Hospital_Dataset.xlsx) into Power BI.
+2.	Data cleaning: 
+     •	Removed duplicate rows based on AdmissionID in the Admissions sheet (30 rows).
+     •	Replaced missing TreatmentCost, SatisfactionScore, and InsuranceType values with the median or “Unknown.”
+     •	Replaced missing Age values in the Patients sheet with the median age.
+     •	Standardized AdmissionType values (for example, “emergency” and “EMERGENCY”) by capitalizing each word and trimming spaces.
+     •	Standardized Gender values in the Patients sheet (M, F, male, FEMALE) to Male and Female.
+     •	Converted date columns stored as text to the Date data type.
+3.	Data modeling: created relationships between the Admissions, Patients, Doctors, and Departments tables, and added a date table using the CALENDAR function.
+4.	DAX measures: total admissions, readmission rate, average length of stay, and average satisfaction score.
+5.	Dashboard design: built visuals with slicers and filters for interactive exploration.
+
+
 
 ## Dashboard Preview
 ![Overview](screenshot_overview.png)
@@ -34,9 +42,11 @@ An interactive Power BI dashboard that analyzes hospital admission and patient d
 - Admissions peaked in March 2023 (74) and were lowest in August 2025 (40).
 
 ## Files
-- `[project-name].pbix`: Power BI dashboard file
-- `[filename].csv`: dataset
-- `screenshot_*.png`: dashboard screenshots
+- Hospital_Patients_Project.pbix: Power BI dashboard file
+- Hospital_Dataset.xlsx:          dataset
+- screenshot_overview.png:        Overview dashboard page
+- screenshot_department.png:      Department readmission analysis page
+- screenshot_risk.png:            Readmission risk analysis page
 
 ## Author
-ANAND APPUNNI M A, Data Analyst# hospital-admissions-powerbi-dashboard
+ANAND APPUNNI M A, Data Analyst

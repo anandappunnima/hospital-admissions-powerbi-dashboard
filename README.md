@@ -1,4 +1,4 @@
-# Hospital Admissions & Patient Analysis Dashboard
+# Hospital Admissions & Patient Readmissions Analysis Dashboard
 
 An interactive Power BI dashboard that analyzes hospital admission and patient data to show admission trends, patient demographics, and department-wise activity.
 
@@ -26,8 +26,6 @@ An interactive Power BI dashboard that analyzes hospital admission and patient d
 3.	Data modeling: created relationships between the Admissions, Patients, Doctors, and Departments tables, and added a date table using the CALENDAR function.
 4.	DAX measures: total admissions, readmission rate, average length of stay, and average satisfaction score.
 5.	Dashboard design: built visuals with slicers and filters for interactive exploration.
-
-
 
 ## Dashboard Preview
 ![Overview](screenshot_overview.png)
